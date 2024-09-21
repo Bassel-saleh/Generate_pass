@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <form id="passwordForm">
+        <label for="length">Length:</label>
+        <input type="number" id="length" name="length" min="1" required><br><br>
+
+        <label for="use_uppercase">Use Uppercase Letters:</label>
+        <input type="checkbox" id="use_uppercase" name="use_uppercase"><br><br>
+
+        <label for="use_numbers">Use Numbers:</label>
+        <input type="checkbox" id="use_numbers" name="use_numbers"><br><br>
+
+        <label for="use_symbols">Use Symbols:</label>
+        <input type="checkbox" id="use_symbols" name="use_symbols"><br><br>
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const length = document.getElementById('length').value;
+            const useUppercase = document.getElementById('use_uppercase').checked;
+            const useNumbers = document.getElementById('use_numbers').checked;
+            const useSymbols = document.getElementById('use_symbols').checked;
+
+            console.log("Length:", length);
+            console.log("Use Uppercase:", useUppercase);
+            console.log("Use Numbers:", useNumbers);
+            console.log("Use Symbols:", useSymbols);
+
+            // You can add your logic for generating the password here
+        });
+    </script>
+</body>
+</html>
